@@ -28,7 +28,13 @@ const userSchema = new mongoose.Schema({
   progress: [progressSchema],
   workoutPlan: { type: String, default: '' },
   dietPlan: { type: String, default: '' },
-  goals: { type: String, default: '' }
+  goals: { type: String, default: '' },
+  targetCalories: { type: Number, default: 2800 },
+  targetProtein: { type: Number, default: 180 },
+  targetCarbs: { type: Number, default: 300 },
+  targetFats: { type: Number, default: 80 },
+  weeklyStreak: { type: Number, default: 0 },
+  lastActiveDate: { type: Date }
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);

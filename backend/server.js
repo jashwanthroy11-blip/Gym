@@ -7,6 +7,8 @@ const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
 const trainerRoutes = require('./routes/trainer');
 const memberRoutes = require('./routes/member');
+const nutritionRoutes = require('./routes/nutrition');
+const workoutSessionRoutes = require('./routes/workoutSessions');
 const errorHandler = require('./middleware/errorHandler');
 
 dotenv.config();
@@ -26,6 +28,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/trainer', trainerRoutes);
 app.use('/api/member', memberRoutes);
+app.use('/api/nutrition', nutritionRoutes);
+app.use('/api/workouts/sessions', workoutSessionRoutes);
 
 app.use(errorHandler);
 
