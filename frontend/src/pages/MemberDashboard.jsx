@@ -16,9 +16,17 @@ const MemberDashboard = () => {
           </div>
           <h1 className="font-headline-lg text-headline-md text-primary-container italic tracking-tighter uppercase">HIGH-VELOCITY</h1>
         </div>
-        <button className="text-white/60 hover:text-primary-container transition-colors active:scale-95 duration-200">
-          <span className="material-symbols-outlined">notifications</span>
-        </button>
+        <div className="flex items-center gap-3">
+          <Link
+            to="/settings"
+            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
+          >
+            Settings
+          </Link>
+          <button className="text-white/60 hover:text-primary-container transition-colors active:scale-95 duration-200">
+            <span className="material-symbols-outlined">notifications</span>
+          </button>
+        </div>
       </header>
 
       <main className="pt-24 px-container-margin max-w-5xl mx-auto space-y-lg">

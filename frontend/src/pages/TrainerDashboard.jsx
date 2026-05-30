@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import api from '../services/api';
@@ -19,12 +20,20 @@ const TrainerDashboard = () => {
             <h1 className="mt-3 text-3xl font-semibold">Hi {user?.name}</h1>
             <p className="mt-2 text-slate-400">Review assigned members, build workout plans, and track progress.</p>
           </div>
-          <button
-            onClick={logout}
-            className="rounded-2xl bg-rose-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-rose-400"
-          >
-            Logout
-          </button>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/settings"
+              className="rounded-2xl border border-slate-700 px-5 py-3 text-sm text-slate-300 transition hover:border-slate-500 hover:bg-slate-800"
+            >
+              Settings
+            </Link>
+            <button
+              onClick={logout}
+              className="rounded-2xl bg-rose-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-rose-400"
+            >
+              Logout
+            </button>
+          </div>
         </header>
 
         <section className="grid gap-4 lg:grid-cols-2">
