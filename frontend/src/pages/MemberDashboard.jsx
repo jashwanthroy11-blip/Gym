@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Calendar from '../components/Calendar';
 
 const MemberDashboard = () => {
   return (
@@ -88,6 +89,8 @@ const MemberDashboard = () => {
             </div>
           </div>
         </section>
+
+        <Calendar />
 
         {/* Personal Bests */}
         <section className="space-y-md">
