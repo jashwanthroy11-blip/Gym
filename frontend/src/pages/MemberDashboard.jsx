@@ -131,10 +131,10 @@ const MemberDashboard = () => {
         {[
           { icon: 'fitness_center', label: 'Workout', active: true },
           { icon: 'monitoring', label: 'Progress', active: false },
-          { icon: 'restaurant', label: 'Nutrition', active: false },
+          { icon: 'restaurant', label: 'Nutrition', path: '/food', active: false },
           { icon: 'person', label: 'Profile', active: false }
         ].map((item, idx) => (
-          <Link key={idx} to="#" className={`flex flex-col items-center justify-center transition-all active:scale-90 duration-150 ${item.active ? 'text-[#39FF14] relative after:content-[""] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#39FF14] after:rounded-full' : 'text-white/40 hover:text-white'}`}>
+          <Link key={idx} to={item.path} className={`flex flex-col items-center justify-center transition-all active:scale-90 duration-150 ${item.active ? 'text-[#39FF14] relative after:content-[""] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#39FF14] after:rounded-full' : 'text-white/40 hover:text-white'}`}>
             <span className="material-symbols-outlined">{item.icon}</span>
             <span className="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">{item.label}</span>
           </Link>

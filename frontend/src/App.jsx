@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import AdminDashboard from './pages/AdminDashboard';
 import TrainerDashboard from './pages/TrainerDashboard';
 import MemberDashboard from './pages/MemberDashboard';
+import Food from './pages/Food';
 import Settings from './pages/Settings';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -27,6 +28,7 @@ function App() {
         </Route>
         <Route element={<ProtectedRoute allowedRoles={[ 'member' ]} />}>
           <Route path="/member" element={<MemberDashboard />} />
+          <Route path="/food" element={<Food />} />
         </Route>
         <Route element={<ProtectedRoute allowedRoles={[ 'admin', 'trainer', 'member' ]} />}>
           <Route path="/settings" element={<Settings />} />
